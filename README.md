@@ -1,8 +1,8 @@
-# Ethereum Wallet Ðapp
+# Wabei Wallet Ðapp
 
-The Ethereum wallet.
+The Wabei wallet.
 
-[![Build Status](https://travis-ci.org/ethereum/meteor-dapp-wallet.svg?branch=master)](https://travis-ci.org/ethereum/meteor-dapp-wallet)
+[![Build Status](https://travis-ci.org/wabei/meteor-dapp-wallet.svg?branch=master)](https://travis-ci.org/wabei/meteor-dapp-wallet)
 
 **PLEASE NOTE:** This wallet is not yet officially released,
 and can contain severe bugs! Please use at your own risk.
@@ -46,7 +46,7 @@ Navigating to `index.html` will start the app, but you will need to serve it ove
 
 ---
 
-To deploy to the **wallet.ethereum.org** site, execute these commands:
+To deploy to the **wallet.bitwa.org** site, execute these commands:
 
     $ git checkout gh-pages
     $ git merge develop
