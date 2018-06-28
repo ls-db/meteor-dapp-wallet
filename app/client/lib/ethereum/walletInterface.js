@@ -1,5 +1,5 @@
 // MAIN-NET CONTRACT ADDRESS
-var mainNetAddress = '0x273930d21e01ee25e4c219b63259d214872220a2';
+var mainNetAddress = '0x2bcec565226ba2d422ea05ae2ab899ca59c1e73d';
 var testNetAddress = '0x1d649ca03d1bcd84877482c1dd8d3f9a7398728f'; // morden testnet
 
 walletInterface = [

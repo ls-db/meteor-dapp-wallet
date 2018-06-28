@@ -27,7 +27,7 @@ Helpers.getDefaultContractExample = function(withoutPragma) {
     var solcVersion;
 
     // Keep this for now as the Mist-API object will only be availabe from Mist version >= 0.8.9
-    // so that older versions that will query code from wallet.ethereum.org won't use broken example code.
+    // so that older versions that will query code from wallet.bitwa.org won't use broken example code.
     if (typeof mist !== 'undefined' && mist.solidity && mist.solidity.version) {
       solcVersion = mist.solidity.version;
     } else {
@@ -310,7 +310,7 @@ Helpers.formatTransactionBalance = function(value, exchangeRates, unit) {
     if (unit === 'btc') format += '[000000]';
     else format += '[0]';
 
-    var price = new BigNumber(String(web3.fromWei(value, 'ether')), 10).times(
+    var price = new BigNumber(String(web3.fromWei(value, 'wabei')), 10).times(
       exchangeRates[unit].price
     );
     return EthTools.formatNumber(price, format) + ' ' + unit.toUpperCase();

@@ -18,8 +18,8 @@ The available units
 */
 selectableUnits = [
   {
-    text: 'ETHER',
-    value: 'ether'
+    text: 'WABEI',
+    value: 'wabei'
   },
   {
     text: 'FINNEY', //(µΞ)
@@ -55,7 +55,7 @@ if (moment().format('MM-DD') == '04-01') {
     { text: 'LOVELACE', value: 'lovelace' },
     { text: 'BABBAGE', value: 'babbage' },
     { text: 'WEI', value: 'wei' },
-    { text: 'NOETHER', value: 'noether' }
+    { text: 'NOWABEI', value: 'nowabei' }
   );
 
   // Claude's Birthday

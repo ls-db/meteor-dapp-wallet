@@ -49,7 +49,7 @@ Template.registerHelper('isBrowserMode', function() {
 });
 
 /**
-Check if currency unit is an ether unit
+Check if currency unit is an wabei unit
 
 @method (isEtherUnit)
 **/
@@ -226,7 +226,7 @@ Template.registerHelper('formatTime', Helpers.formatTime);
 /**
 Formats a given transactions balance
 
-    {{formatTransactionBalance value exchangeRates "ether"}}
+    {{formatTransactionBalance value exchangeRates "wabei"}}
 
 @method formatTransactionBalance
 @param {String} value  the value to format

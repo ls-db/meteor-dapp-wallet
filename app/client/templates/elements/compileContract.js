@@ -89,8 +89,8 @@ Template['elements_compileContract'].onCreated(function() {
       );
     } else {
       // Bytecode Data
-      if (!selectedToken || selectedToken === 'ether') {
-        // send ether
+      if (!selectedToken || selectedToken === 'wabei') {
+        // send wabei
         txData = TemplateVar.get('show') ? textareaData : '';
       }
     }

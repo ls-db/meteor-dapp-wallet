@@ -20,7 +20,7 @@ Contains all collection observers
 collectionObservers = [];
 
 /**
-Config for the ethereum connector
+Config for the wabei connector
 
 @property config
 */
@@ -54,7 +54,7 @@ Session.setDefault('network', false);
 var checkNetwork = function() {
   web3.eth.getBlock(0).then(function(block) {
     switch (block.hash) {
-      case '0xd4e56740f876aef8c010b86a40d5f56745a118d0906a34e69aec8c0db1cb8fa3':
+      case '0x2dfb85a13aab43feba3395984a0ab65fe4f41184ad224f244c4cbeae9ca792a6':
         Session.set('network', 'main');
         break;
       case '0x6341fd3daf94b748c72ced5a5b26028f2474f5f00d824504e4fa37a75767e177':

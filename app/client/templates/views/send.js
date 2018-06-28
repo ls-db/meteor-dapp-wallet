@@ -77,7 +77,7 @@ var getDataField = function() {
   // send tokens
   var selectedToken = TemplateVar.get('selectedToken');
 
-  if (selectedToken && selectedToken !== 'ether') {
+  if (selectedToken && selectedToken !== 'wabei') {
     var mainRecipient = TemplateVar.getFrom(
       'div.dapp-address-input input.to',
       'value'
@@ -145,12 +145,12 @@ Template['views_send'].onCreated(function() {
   // Deploy contract
   if (FlowRouter.getRouteName() === 'deployContract') {
     TemplateVar.set('selectedAction', 'deploy-contract');
-    TemplateVar.set('selectedToken', 'ether');
+    TemplateVar.set('selectedToken', 'wabei');
 
     // Send funds
   } else {
     TemplateVar.set('selectedAction', 'send-funds');
-    TemplateVar.set('selectedToken', FlowRouter.getParam('token') || 'ether');
+    TemplateVar.set('selectedToken', FlowRouter.getParam('token') || 'wabei');
   }
 
   // check if we are still on the correct chain
@@ -177,7 +177,7 @@ Template['views_send'].onCreated(function() {
   template.autorun(function(c) {
     var unit = EthTools.getUnit();
 
-    if (!c.firstRun && TemplateVar.get('selectedToken') === 'ether') {
+    if (!c.firstRun && TemplateVar.get('selectedToken') === 'wabei') {
       TemplateVar.set(
         'amount',
         EthTools.toWei(
@@ -228,7 +228,7 @@ Template['views_send'].onRendered(function() {
     }
 
     if (selectedAddress !== address) {
-      TemplateVar.set('selectedToken', 'ether');
+      TemplateVar.set('selectedToken', 'wabei');
     }
 
     selectedAddress = address;
@@ -248,8 +248,8 @@ Template['views_send'].onRendered(function() {
     // if(_.isString(address))
     //     address = address.toLowerCase();
 
-    // Ether tx estimation
-    if (tokenAddress === 'ether') {
+    // Wabei tx estimation
+    if (tokenAddress === 'wabei') {
       if (EthAccounts.findOne({ address: address }, { reactive: false })) {
         web3.eth.estimateGas(
           {
@@ -361,18 +361,18 @@ Template['views_send'].helpers({
 
     @method (total)
     */
-  total: function(ether) {
+  total: function(wabei) {
     var selectedAccount = Helpers.getAccountByAddress(
       TemplateVar.getFrom('.dapp-select-account.send-from', 'value')
     );
     var amount = TemplateVar.get('amount');
     if (!_.isFinite(amount)) return '0';
 
-    // ether
+    // wabei
     var gasInWei =
       TemplateVar.getFrom('.dapp-select-gas-price', 'gasInWei') || '0';
 
-    if (TemplateVar.get('selectedToken') === 'ether') {
+    if (TemplateVar.get('selectedToken') === 'wabei') {
       amount =
         selectedAccount && selectedAccount.owners
           ? amount
@@ -396,7 +396,7 @@ Template['views_send'].helpers({
     return Helpers.formatNumberByDecimals(amount, token.decimals);
   },
   /**
-    Returns the total amount - the fee paid to send all ether/coins out of the account
+    Returns the total amount - the fee paid to send all wabei/coins out of the account
 
     @method (sendAllAmount)
     */
@@ -406,7 +406,7 @@ Template['views_send'].helpers({
     );
     var amount = 0;
 
-    if (TemplateVar.get('selectedToken') === 'ether') {
+    if (TemplateVar.get('selectedToken') === 'wabei') {
       var gasInWei =
         TemplateVar.getFrom('.dapp-select-gas-price', 'gasInWei') || '0';
 
@@ -536,10 +536,10 @@ Template['views_send'].events({
   /**
     Select a token
 
-    @event click .token-ether
+    @event click .token-wabei
     */
-  'click .token-ether': function(e, template) {
-    TemplateVar.set('selectedToken', 'ether');
+  'click .token-wabei': function(e, template) {
+    TemplateVar.set('selectedToken', 'wabei');
 
     // trigger amount box change
     template.$('input[name="amount"]').trigger('change');
@@ -553,7 +553,7 @@ Template['views_send'].events({
     var value = e.currentTarget.value;
     TemplateVar.set('selectedToken', value);
 
-    if (value === 'ether')
+    if (value === 'wabei')
       TemplateVar.setTo('.dapp-data-textarea', 'value', '');
 
     // trigger amount box change
@@ -568,8 +568,8 @@ Template['views_send'].events({
     e,
     template
   ) {
-    // ether
-    if (TemplateVar.get('selectedToken') === 'ether') {
+    // wabei
+    if (TemplateVar.get('selectedToken') === 'wabei') {
       var wei = EthTools.toWei(e.currentTarget.value.replace(',', '.'));
 
       TemplateVar.set('amount', wei || '0');
@@ -618,7 +618,7 @@ Template['views_send'].events({
         estimatedGas = 22000;
 
       // if its a wallet contract and tokens, don't need to remove the gas addition on send-all, as the owner pays
-      if (sendAll && (selectedAccount.owners || tokenAddress !== 'ether'))
+      if (sendAll && (selectedAccount.owners || tokenAddress !== 'wabei'))
         sendAll = false;
 
       console.log('Providing gas: ', estimatedGas, sendAll ? '' : ' + 100000');
@@ -631,7 +631,7 @@ Template['views_send'].events({
 
       if (
         selectedAccount.balance === '0' &&
-        (!selectedAccount.owners || tokenAddress === 'ether')
+        (!selectedAccount.owners || tokenAddress === 'wabei')
       )
         return GlobalNotification.warning({
           content: 'i18n:wallet.send.error.emptyWallet',
@@ -644,7 +644,7 @@ Template['views_send'].events({
           duration: 2
         });
 
-      if (tokenAddress === 'ether') {
+      if (tokenAddress === 'wabei') {
         if (
           (_.isEmpty(amount) || amount === '0' || !_.isFinite(amount)) &&
           !data

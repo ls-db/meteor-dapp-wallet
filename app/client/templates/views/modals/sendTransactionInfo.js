@@ -14,7 +14,7 @@ The send transaction info template
 // Set basic variables
 Template['views_modals_sendTransactionInfo'].helpers({
   /**
-    Calculates the fee used for this transaction in ether
+    Calculates the fee used for this transaction in wabei
 
     @method (estimatedFee)
     */
@@ -25,7 +25,7 @@ Template['views_modals_sendTransactionInfo'].helpers({
           new BigNumber(this.gasPrice, 10)
         ),
         '0,0.0[0000000] unit',
-        'ether'
+        'wabei'
       );
   }
 });
