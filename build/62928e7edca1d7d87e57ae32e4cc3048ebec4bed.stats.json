@@ -3,8 +3,8 @@
     "name": "standard-minifier-js",
     "version": "2.3.2"
   },
-  "totalMinifiedBytes": 2931586,
-  "totalMinifiedGzipBytes": 747308,
+  "totalMinifiedBytes": 2932072,
+  "totalMinifiedGzipBytes": 747555,
   "minifiedBytesByPackage": {
     "packages/meteor.js": 8962,
     "packages/standard-minifiers.js": 38,
@@ -14,7 +14,7 @@
     "packages/ecmascript.js": 30,
     "packages/modules-runtime.js": 4023,
     "packages/modules.js": [
-      108639,
+      109281,
       {
         "node_modules": {
           "meteor": {
@@ -40,14 +40,14 @@
           },
           "@babel": {
             "runtime": {
-              "package.json": 1309,
+              "package.json": 1234,
               "helpers": {
                 "typeof.js": 500,
                 "toConsumableArray.js": 148,
                 "arrayWithoutHoles.js": 132,
                 "iterableToArray.js": 191,
                 "nonIterableSpread.js": 112,
-                "inheritsLoose.js": 95,
+                "inheritsLoose.js": 147,
                 "extends.js": 270,
                 "assertThisInitialized.js": 151
               },
@@ -61,6 +61,7 @@
                 },
                 "is-iterable.js": 62,
                 "object": {
+                  "create.js": 64,
                   "assign.js": 64
                 }
               }
@@ -88,12 +89,12 @@
               "_ctx.js": 303,
               "_a-function.js": 113,
               "_meta.js": 608,
-              "_shared.js": 124,
+              "_shared.js": 284,
+              "_library.js": 29,
               "_set-to-string-tag.js": 173,
               "_wks.js": 190,
               "_wks-ext.js": 30,
               "_wks-define.js": 226,
-              "_library.js": 29,
               "_enum-keys.js": 208,
               "_object-keys.js": 127,
               "_object-keys-internal.js": 261,
@@ -126,7 +127,7 @@
               "_iterators.js": 29,
               "core.get-iterator-method.js": 187,
               "_classof.js": 343,
-              "_iter-define.js": 1014,
+              "_iter-define.js": 1013,
               "_iter-create.js": 255,
               "_object-gpo.js": 290,
               "_to-object.js": 81,
@@ -320,6 +321,7 @@
                 },
                 "is-iterable.js": 128,
                 "object": {
+                  "create.js": 139,
                   "assign.js": 102
                 }
               },
@@ -328,9 +330,9 @@
                 "_string-at.js": 317,
                 "_to-integer.js": 102,
                 "_defined.js": 103,
-                "_iter-define.js": 1014,
+                "_iter-define.js": 1013,
                 "_library.js": 29,
-                "_export.js": 784,
+                "_export.js": 798,
                 "_global.js": 188,
                 "_core.js": 80,
                 "_ctx.js": 303,
@@ -345,8 +347,8 @@
                 "_dom-create.js": 147,
                 "_to-primitive.js": 342,
                 "_property-desc.js": 111,
-                "_redefine.js": 39,
                 "_has.js": 84,
+                "_redefine.js": 39,
                 "_iterators.js": 29,
                 "_iter-create.js": 255,
                 "_object-create.js": 577,
@@ -360,7 +362,7 @@
                 "_to-length.js": 113,
                 "_to-absolute-index.js": 121,
                 "_shared-key.js": 107,
-                "_shared.js": 124,
+                "_shared.js": 284,
                 "_uid.js": 129,
                 "_enum-bug-keys.js": 133,
                 "_html.js": 77,
@@ -394,6 +396,7 @@
                 "_classof.js": 343,
                 "_iter-detect.js": 303,
                 "core.is-iterable.js": 210,
+                "es6.object.create.js": 80,
                 "es6.object.assign.js": 84,
                 "_object-assign.js": 538
               }
@@ -1054,19 +1057,20 @@
     "app/client/templates/elements/template.createdContractAt.js": 1466,
     "app/client/templates/elements/template.eventsTable.js": 4737,
     "app/client/templates/elements/template.executeContract.js": 8463,
-    "app/client/templates/elements/template.mistAlert.js": 1113,
+    "app/client/templates/elements/template.mistAlert.js": 1104,
+    "app/client/templates/elements/template.newAccountButton.js": 451,
     "app/client/templates/elements/template.selectableUnit.js": 636,
     "app/client/templates/elements/template.tokenBox.js": 1408,
     "app/client/templates/elements/template.transactionTable.js": 11618,
-    "app/client/templates/elements/template.vulnerabilities.js": 2283,
+    "app/client/templates/elements/template.vulnerabilities.js": 2280,
     "app/client/templates/layout/template.header.js": 8585,
     "app/client/templates/layout/template.notFound.js": 248,
     "app/client/templates/views/template.account.js": 16891,
     "app/client/templates/views/template.account_create.js": 7353,
     "app/client/templates/views/template.contracts.js": 3951,
-    "app/client/templates/views/template.dashboard.js": 5790,
+    "app/client/templates/views/template.dashboard.js": 5262,
     "app/client/templates/views/template.send.js": 16427,
-    "app/client/template.index.js": 317,
+    "app/client/template.index.js": 316,
     "app/client/templates/layout/template.main.js": 1174,
     "app/client/lib/ethereum/1_web3Init.js": 123,
     "app/client/lib/ethereum/observeBlocks.js": 2051,
@@ -1080,7 +1084,7 @@
     "app/client/lib/ethereum/walletConnector.js": 1895,
     "app/client/lib/ethereum/walletInterface.js": 29161,
     "app/client/lib/helpers/helperFunctions.js": 9533,
-    "app/client/lib/helpers/templateHelpers.js": 2383,
+    "app/client/lib/helpers/templateHelpers.js": 2357,
     "app/client/lib/thirdparty/ace.js": 338148,
     "app/client/lib/thirdparty/mode-java.js": 26353,
     "app/client/lib/thirdparty/mode-typescript.js": 24786,
@@ -1095,7 +1099,7 @@
     "app/client/templates/views/modals/addToken.js": 1667,
     "app/client/templates/views/modals/eventInfo.js": 426,
     "app/client/templates/views/modals/interface.js": 294,
-    "app/client/templates/views/modals/qrCode.js": 266,
+    "app/client/templates/views/modals/qrCode.js": 263,
     "app/client/templates/views/modals/selectAccount.js": 344,
     "app/client/templates/views/modals/sendTransactionInfo.js": 275,
     "app/client/templates/views/modals/transactionInfo.js": 450,
@@ -1137,7 +1141,7 @@
     "app/i18n/app.zh.i18n.json": 124,
     "app/i18n/wallet.ca.i18n.json": 125,
     "app/i18n/wallet.de.i18n.json": 124,
-    "app/i18n/wallet.en.i18n.json": 14982,
+    "app/i18n/wallet.en.i18n.json": 14943,
     "app/i18n/wallet.es.i18n.json": 134,
     "app/i18n/wallet.fr.i18n.json": 135,
     "app/i18n/wallet.ja.i18n.json": 128,
